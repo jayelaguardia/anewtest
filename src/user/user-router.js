@@ -42,14 +42,8 @@ userRouter
         newUser
       );
 
-      // await UserService.populateUserWords(
-      //   req.app.get('db'),
-      //   user.id
-      // );
-
       res
         .status(201)
-        // .location(path.posix.join(req.originalUrl, `/${user.id}`))
         .json(UserService.serializeUser(user));
     } catch(error) {
       next(error);
